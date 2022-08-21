@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(21, 177, 188);
+  background-color: beige;
 }
 
 .title {
@@ -40,4 +40,5 @@ body {
 .p-description {
   font-size: larger;
   font-family: Chalkduster, fantasy;
+  color: #0b034d;
 }
