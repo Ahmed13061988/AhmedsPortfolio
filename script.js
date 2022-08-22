@@ -7,11 +7,20 @@ const btnHobbies = document.querySelector(".btn--hobbies");
 const jobDescription = document.querySelector(".job");
 const hobbies = document.querySelector(".hobbies");
 const overlay = document.querySelector(".overlay");
+const acc = document.getElementsByClassName("accordion");
 
-// const closing = function () {
-//   jobDescription.classList.add("hidden");
-//   overlay.classList.add("hidden");
-// };
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 btnJobEl.addEventListener("click", function () {
   jobDescription.classList.remove("hidden");
