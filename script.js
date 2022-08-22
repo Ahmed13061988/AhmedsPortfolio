@@ -2,7 +2,9 @@
 
 const btnJobEl = document.querySelector(".btn--job");
 const btnClose = document.querySelector(".close-job");
+const btnHobbies = document,querySelector('.btn--hobbies');
 const jobDescription = document.querySelector(".job");
+const hobbies = document.querySelector('.hobbies');
 const overlay = document.querySelector(".overlay");
 
 const closing = function () {
@@ -10,10 +12,16 @@ const closing = function () {
   overlay.classList.add("hidden");
 };
 
+
 btnJobEl.addEventListener("click", function () {
   jobDescription.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });
+
+btnHobbies.addEventListener('click', function(){
+    hobbies.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+})
 
 btnClose.addEventListener("click", closing);
 
