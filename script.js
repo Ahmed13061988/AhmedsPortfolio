@@ -5,16 +5,23 @@ const btnClose = document.querySelector(".close-job");
 const jobDescription = document.querySelector(".job");
 const overlay = document.querySelector(".overlay");
 
+const closing = function () {
+  jobDescription.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
 btnJobEl.addEventListener("click", function () {
   jobDescription.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });
 
-btnClose.addEventListener("click", function () {
-  jobDescription.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+btnClose.addEventListener("click", closing);
+
+overlay.addEventListener("click", closing);
 
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") jobDescription.classList.add("hidden");
+  if (e.key === "Escape") {
+    jobDescription.classList.add("hidden");
+    overlay.classList.add("hidden");
+  }
 });
