@@ -174,7 +174,7 @@ body {
 
   margin-right: 2px;
   position: absolute;
-  top: 10%;
+  top: 9%;
   right: 5%;
 }
 
@@ -188,5 +188,8 @@ body {
   background-color: white;
   display: none;
   overflow: hidden;
-  border-radius: 100px;
+  border-radius: 50px;
+  width: 200px;
+  height: 100px;
+  margin-left: 73rem;
 }
